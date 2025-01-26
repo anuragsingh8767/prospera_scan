@@ -1,0 +1,406 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "My API",
+    "description": "Description",
+    "version": "1.0.0"
+  },
+  "host": "localhost:5000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/S3/upload": {
+      "post": {
+        "tags": [
+          "S3"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "bucketname",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "filepath",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/S3/download": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "bucketname",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "filename",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "downloadpath",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/S3/list": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "bucketname": {
+                  "example": "any"
+                },
+                "continuationToken": {
+                  "example": "any"
+                },
+                "pageSize": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/S3/delete": {
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "bucketname",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "filepath",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/S3/read": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "bucketname",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "filepath",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/box/upload": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "folderId",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "filepath",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/box/download": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "fileId",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "downloadpath",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/box/list": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "folderId": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/box/delete": {
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "fileId",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/box/read": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "fileId",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/boxauth/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/boxauth/callback": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/callback": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/upload": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "bucketname",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "filepath",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/download": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "bucketname",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "filename",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "downloadpath",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/list": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "bucketname": {
+                  "example": "any"
+                },
+                "continuationToken": {
+                  "example": "any"
+                },
+                "pageSize": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/delete": {
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "bucketname",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "filepath",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/read": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "bucketname",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "filepath",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    }
+  }
+}

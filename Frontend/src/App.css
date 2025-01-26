@@ -1,0 +1,35 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.content-wrapper {
+    display: flex;
+    flex: 1;
+margin-top:50px
+    
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.menubar-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.sidebar-menu {
+    flex: 0 0 auto;
+    height: 100%;
+}
+
+.menubar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}

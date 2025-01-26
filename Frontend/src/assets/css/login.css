@@ -1,0 +1,226 @@
+/* login.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    overflow: hidden;
+}
+
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f2f5;
+    
+}
+
+.login-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* max-width: 1200px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; */
+    overflow: hidden;
+}
+
+.login-panel, .login-image {
+    flex: 1;
+    padding: 30px;
+}
+
+.login-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.login-panel .logo {
+    width: 100px;
+    margin-bottom: 30px;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.login-form p {
+    margin-bottom: 20px;
+    color: #777;
+}
+
+.login-form a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+.login-form .p-inputtext, .login-form .p-password input{
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #888888;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.login-form .p-inputtext:focus, .login-form .p-password input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.login-form .p-button {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: medium;
+    border-radius: 15px;
+}
+
+.login-form .p-button:hover {
+    background-color: #0056b3;
+}
+
+.login-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom right, #007bff, #00d4ff);
+    color: white;
+    text-align: center;
+}
+
+.login-image-content {
+    padding-top: 40px;
+}
+
+.login-image-content h1 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.login-image-content h3 {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.datalogo{
+    Width: 480px;
+}
+
+/* .image-footer {
+    padding-bottom: 20px;
+} */
+
+/* .image-footer p {
+    margin-bottom: 10px;
+} */
+
+.icons {
+    display: flex;
+    gap: 20px;
+}
+
+.icons .pi {
+    font-size: 24px;
+}
+.error-message {
+    color: red !important;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.p-button-text-right-spinner .pi-spinner {
+    margin-left: 8px; 
+}
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-icon {
+    position: absolute;
+    right: 10px;
+    top: 35%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px; 
+    color: #007bff; 
+}
+.p-inputtextError{
+    border: 1px solid red !important;
+}
+@media (max-width: 768px) {
+    body{
+        overflow: scroll;
+    }
+    .login-wrapper {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .login-image {
+        order: -1; /* Move login-image above login-panel */
+        padding: 20px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .login-panel {
+        padding: 20px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .login-form {
+        padding: 20px;
+    }
+
+    .login-form .p-inputtext, .login-form .p-password input {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-panel .logo {
+        width: 120px;
+        margin-bottom: 20px;
+    }
+
+    .login-image-content h1 {
+        font-size: 28px;
+    }
+
+    .login-image-content h3 {
+        font-size: 16px;
+    }
+
+    .icons .pi {
+        font-size: 20px;
+    }
+}
+
+

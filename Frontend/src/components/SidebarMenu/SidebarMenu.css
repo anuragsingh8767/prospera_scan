@@ -1,0 +1,92 @@
+.sidebar {
+    transition: width 0.3s ease;
+    background-color: rgb(224, 224, 224);
+    height: calc(100vh - 50px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.p-sidebar-collapsed {
+    width: 60px;
+}
+
+.p-sidebar-expanded {
+    width: 200px;
+}
+
+.p-sidebar-header {
+    display: flex;
+    align-items: center;
+    /* background-color: white; */
+    color: #007bff;
+    width: 100%;
+    position: relative;
+}
+
+.p-toggle-button {
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #007bff;
+    /* position: absolute; */
+    top: 10px;
+    right: 10px;
+    padding-left: 20px;
+}
+
+.p-menu-sidebar {
+    width: 100%;
+}
+
+.p-menu-list {
+    list-style-type: none;
+    padding: 0;
+    /* margin-top: 30px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.p-menuitem {
+    display: flex;
+    align-items: center;
+    color: #007bff;
+    width: 100%;
+    padding-left: 20px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.p-menuitem:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.p-menuitem-active {
+    background-color: rgba(0, 123, 255, 0.2);
+}
+
+.p-menuitem-icon {
+    color: #007bff;
+    font-size: 1.2em;
+    padding-right: 10px;
+}
+
+.p-menuitem-text {
+    flex-grow: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #007bff;
+}
+
+.p-sidebar-collapsed .p-menuitem-text {
+    opacity: 0;
+    width: 0;
+}
+
+.p-sidebar-collapsed .p-menuitem-icon {
+    font-size: 1.2em;
+}
